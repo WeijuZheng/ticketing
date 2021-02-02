@@ -6,8 +6,7 @@ import { currentUserRouter } from './routes/current-user';
 import { signinRouter } from './routes/signin';
 import { signoutRouter } from './routes/signout';
 import { signupRouter } from './routes/signup';
-import { errorHandler } from './middlewares/errorHandler';
-import { NotFoundError } from './errors/notFoundError';
+import { errorHandler, NotFoundError } from '@wztickets/common';
 
 const app = express();
 app.set('trust proxy', true);
