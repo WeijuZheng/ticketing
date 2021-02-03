@@ -6,11 +6,12 @@ import { Ticket } from '../models/ticket';
 
 const router = express.Router();
 
-router.post('/api/tickets', requireAuth,
+router.post('/api/tickets',
+    requireAuth,
     [
         body('title')
             .notEmpty()
-            .withMessage('Title is require'),
+            .withMessage('Title is required'),
         body('price')
             .isFloat({ gt: 0 })
             .withMessage('Price must be greater than 0')
