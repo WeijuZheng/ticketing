@@ -1,5 +1,4 @@
 import express from 'express';
-
 import { currentUser } from '@wztickets/common';
 
 const router = express.Router();
