@@ -1,6 +1,8 @@
 import mongoose from 'mongoose';
 import { OrderStatus } from '@wztickets/common';
-import {TicketDoc} from './ticket';
+import { TicketDoc } from './ticket';
+
+export { OrderStatus };
 
 interface OrderAttrs {
     userId: string;
@@ -24,12 +26,12 @@ const orderSchema = new mongoose.Schema<OrderDoc, OrderModel>({
     userId: {
         type: String,
         required: true,
-        enum: Object.values(OrderStatus),
-        default: OrderStatus.Created
     },
     status: {
         type: String,
-        required: true
+        required: true,
+        enum: Object.values(OrderStatus),
+        default: OrderStatus.Created
     },
     expiresAt: {
         type: mongoose.Schema.Types.Date
