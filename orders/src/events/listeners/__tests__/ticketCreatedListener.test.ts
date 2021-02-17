@@ -2,12 +2,11 @@ import mongoose from 'mongoose';
 import { Message } from 'node-nats-streaming';
 import { TicketCreatedEvent } from '@wztickets/common';
 import { TicketCreatedListener } from '../ticketCreatedListener';
-import { natsWrapper } from '../../../__mocks__/natsWrapper';
+import { natsWrapper } from '../../../natsWrapper';
 import { Ticket } from '../../../models/ticket';
 
 const setup = async () => {
     // create an instance of the listener
-    // @ts-ignore
     const listener = new TicketCreatedListener(natsWrapper.client);
 
     // create a fake data event

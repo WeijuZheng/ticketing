@@ -4,7 +4,8 @@ import {
     validateRequest,
     requireAuth,
     NotFoundError,
-    NotAuthorizedError
+    NotAuthorizedError,
+    BadRequestError
 } from '@wztickets/common';
 import { Ticket } from '../models/ticket';
 import { TicketUpdatedPublisher } from '../events/publishers/ticketUpdatedPublisher';
@@ -32,6 +33,10 @@ router.put('/api/tickets/:id',
 
         if (ticket.userId !== req.currentUser!.id) {
             throw new NotAuthorizedError();
+        }
+
+        if (ticket.orderId) {
+            throw new BadRequestError('cannot edit a reserved ticket');
         }
 
         ticket.set({
