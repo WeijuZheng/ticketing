@@ -1,7 +1,11 @@
 import express, { Request, Response } from 'express';
+import { stripe } from '../stripe';
 import { body } from 'express-validator';
 import { requireAuth, validateRequest, BadRequestError, NotFoundError, NotAuthorizedError, OrderStatus } from '@wztickets/common';
+import { PaymentCreatedPublisher } from '../events/publishers/paymentCreatedPublisher';
+import { natsWrapper } from '../natsWrapper';
 import { Order } from '../models/order';
+import { Payment } from '../models/payment';
 
 const router = express.Router();
 
@@ -32,7 +36,25 @@ router.post('/api/payments', requireAuth,
             throw new BadRequestError('can not pay for an cancelled order');
         }
 
-        res.send({ sucess: true });
+        const charge = await stripe.charges.create({
+            amount: order.price * 100,
+            currency: 'usd',
+            source: token
+        });
+
+        const payment = Payment.build({
+            orderId: orderId,
+            stripeId: charge.id
+        });
+        await payment.save();
+
+        await new PaymentCreatedPublisher(natsWrapper.client).publish({
+            id: payment.id,
+            orderId: payment.orderId,
+            stripeId: payment.stripeId
+        });
+
+        res.status(201).send({ id: payment.id });
     });
 
 export { router as createChargeRouter };
