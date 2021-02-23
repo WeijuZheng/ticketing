@@ -2,7 +2,7 @@ import { useState } from "react";
 import Router from 'next/router';
 import useRequest from "../../hooks/useRequest";
 
-const signup = () => {
+const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { doRequest, errors } = useRequest({
@@ -35,4 +35,4 @@ const signup = () => {
     </form>
 };
 
-export default signup;
+export default Signup;
