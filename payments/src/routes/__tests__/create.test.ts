@@ -60,7 +60,6 @@ it('returns a 400 when purchasing a cancelled order', async () => {
         .expect(400);
 });
 
-// fill in the api key in setup.ts first for this test
 it('returns a 201 with valid inputs', async () => {
     const userId = mongoose.Types.ObjectId().toHexString();
 
