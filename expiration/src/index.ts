@@ -2,6 +2,7 @@ import { natsWrapper } from './natsWrapper';
 import { OrderCreatedListener } from './events/listeners/orderCreatedListener';
 
 const start = async () => {
+    console.log('Starting...');
     if (!process.env.NATS_URL) {
         throw new Error('NATS_URL must bedefined');
     }
