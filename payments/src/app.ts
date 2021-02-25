@@ -13,7 +13,8 @@ app.use(
     cookieSession({
         signed: false,
         // when running jest, process.env.NODE_ENV will be set to 'test
-        secure: process.env.NODE_ENV !== 'test'
+        // secure: process.env.NODE_ENV !== 'test'
+        secure: false
     })
 );
 
