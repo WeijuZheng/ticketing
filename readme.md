@@ -1,7 +1,7 @@
 # Ticketing App
 A full stack microservices event-driven project. 
 
-This ticketing application allow users to create accounts in order to sell or purchase tickets.
+This application allow users to purchase or sell tickets.
 
 This app is created mainly using microservices architecture, docker, kubernetes, NATS Streamging Server, Nginx Ingress Controller, Node.js, Express, MongoDB, Next.js and Typescript.
 
