@@ -67,7 +67,7 @@ This service manages orders creation, deletion and showing order detail. User mu
 This service handles users' payment. When a POST request was send by the front end to this service with valid information (valid stripe token and order Id), it will charge the user the correct amount of money for the purchased ticket. Then it will also publish a "payment:created" event to the order service to indicated that the order has been paid. It listens to the "order:created" and "order:cancelled" events in order to store order data into its own order database for further usage.
 
 - **[Expiration Service](https://github.com/WeijuZheng/ticketing/tree/master/expiration)** <br>
-This service only in charge of the expiration timer. It only listen to the "order:created" event. When it received such an event, it will calculate a correct delay time for the ticket. After the delay time, it will publish a "expiration:complete" event to indicate that the ticket is expired.
+This service only in charge of the expiration timer. It only listen to the "order:created" event. When it received such an event, it will calculate a correct delay time for the ticket. After the delay time, it will publish an "expiration:complete" event to indicate that the order is expired.
 
 ## Common Module
 All the common code shared among each service are written in a NPM module.<br> 
