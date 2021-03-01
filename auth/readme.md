@@ -15,7 +15,7 @@ Every json web token is signed using a secret key that is stored as a Kubernetes
 The json web token then will be send back to the client in a cookie. Every time a client visit the app, the cookie will be checked to see if the user is authenticated.
 
 ## API
-### Get the current user's information
+### **Get the current user's information**
 #### Request
 `GET /api/users/currentuser`
 #### Request Body
@@ -24,7 +24,7 @@ The json web token then will be send back to the client in a cookie. Every time 
 - Status Code: `200`
 - Content: `{ id: 123, email: 'test@test.com' }`
 
-### User Sign Up
+### **User Sign Up**
 #### Request
 `POST /api/users/signup`
 #### Request Body
@@ -33,7 +33,7 @@ The json web token then will be send back to the client in a cookie. Every time 
 - Status Code: `201`
 - Content: `{ id: 123, email: 'test@test.com' }`
 
-### User Sign In
+### **User Sign In**
 #### Request
 `POST /api/users/signin`
 #### Request Body
@@ -42,7 +42,7 @@ The json web token then will be send back to the client in a cookie. Every time 
 - Status Code: `200`
 - Content: `{ id: 123, email: 'test@test.com' }`
 
-### User Sign Out
+### **User Sign Out**
 #### Request
 `POST /api/users/signout`
 #### Request Body
