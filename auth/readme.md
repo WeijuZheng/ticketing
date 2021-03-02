@@ -15,7 +15,6 @@ Every json web token is signed using a secret key that is stored as a Kubernetes
 The json web token then will be send back to the client in a cookie. Every time a client visit the app, the cookie will be checked to see if the user is authenticated.
 
 ## Service API
----
 ### Get the current user's information
 #### Request
 `GET /api/users/currentuser`
