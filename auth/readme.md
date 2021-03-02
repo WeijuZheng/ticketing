@@ -16,37 +16,38 @@ The json web token then will be send back to the client in a cookie. Every time 
 
 ## Service API
 ### Get the current user's information
->#### Request
->`GET /api/users/currentuser`
->#### Request Body
->`{}`
->#### Response
->- Status Code: `200`
->- Content: `{ id: 123, email: 'test@test.com' }`
-
+#### Request
+`GET /api/users/currentuser`
+#### Request Body
+`{}`
+#### Response
+- Status Code: `200`
+- Content: `{ id: 123, email: 'test@test.com' }`
+---
 ### User Sign Up
->#### Request
->`POST /api/users/signup`
->#### Request Body
->`{ email: 'test@test.com', password: 123456 }`
->#### Response
->- Status Code: `201`
->- Content: `{ id: 123, email: 'test@test.com' }`
-
+#### Request
+`POST /api/users/signup`
+#### Request Body
+`{ email: 'test@test.com', password: 123456 }`
+#### Response
+- Status Code: `201`
+- Content: `{ id: 123, email: 'test@test.com' }`
+---
 ### User Sign In
->#### Request
->`POST /api/users/signin`
->#### Request Body
->`{ email: 'test@test.com', password: 123456 }`
->#### Response
->- Status Code: `200`
->- Content: `{ id: 123, email: 'test@test.com' }`
-
+#### Request
+`POST /api/users/signin`
+#### Request Body
+`{ email: 'test@test.com', password: 123456 }`
+#### Response
+- Status Code: `200`
+- Content: `{ id: 123, email: 'test@test.com' }`
+---
 ### User Sign Out
->#### Request
->`POST /api/users/signout`
->#### Request Body
->`{}`
->#### Response
->- Status Code: `200`
->- Content: `{}`
+#### Request
+`POST /api/users/signout`
+#### Request Body
+`{}`
+#### Response
+- Status Code: `200`
+- Content: `{}`
+---
