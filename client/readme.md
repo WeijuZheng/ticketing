@@ -1,2 +1,2 @@
 # Client Service
-This is the client service of the ticketing app. This service is responsible for generating a fully rendered HTML file with content, and send it back to the user. This service is implemented mainly using Next.js.
+This is the client service of the [ticketing app](https://github.com/WeijuZheng/ticketing). This service is responsible for generating a fully rendered HTML file with content, and send it back to the user. This service is implemented mainly using Next.js.

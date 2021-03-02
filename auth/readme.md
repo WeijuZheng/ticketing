@@ -1,5 +1,5 @@
 # Auth Service
-This is the auth service of the ticketing app. This service handles user signup, signin, and signout. it's responsible for generating and deleting user's json web token, so other services can know if a user is authenticated.
+This is the auth service of the [ticketing app](https://github.com/WeijuZheng/ticketing). This service handles user signup, signin, and signout. It's responsible for generating and deleting user's json web token, so other services can know if a user is authenticated. This service do not need to communicate to other services.
 
 All the request to this app with path prefix of `/api/users/` will be send to this auth service.
 
@@ -22,27 +22,27 @@ The json web token then will be send back to the client in a cookie. Every time 
 `{}`
 #### Response
 - Status Code: `200`
-- Content: `{ id: 123, email: 'test@test.com' }`
+- Content: `{ id, email }`
 ---
-### User Sign Up
+### User sign up
 #### Request
 `POST /api/users/signup`
 #### Request Body
-`{ email: 'test@test.com', password: 123456 }`
+`{ email, password }`
 #### Response
 - Status Code: `201`
-- Content: `{ id: 123, email: 'test@test.com' }`
+- Content: `{ id, email }`
 ---
-### User Sign In
+### User sign in
 #### Request
 `POST /api/users/signin`
 #### Request Body
-`{ email: 'test@test.com', password: 123456 }`
+`{ email, password }`
 #### Response
 - Status Code: `200`
-- Content: `{ id: 123, email: 'test@test.com' }`
+- Content: `{ id, email }`
 ---
-### User Sign Out
+### User sign out
 #### Request
 `POST /api/users/signout`
 #### Request Body
