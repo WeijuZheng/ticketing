@@ -74,7 +74,7 @@ All the common code shared among each service are written in a NPM module.<br>
 - Code can be found [here](https://github.com/WeijuZheng/ticketing-common/tree/7417330665b3f90442fc5007cf10666bcc1b2751)<br>
 - NPM module can be found [here](https://www.npmjs.com/package/@wztickets/common) 
 
-## Deploymeny
+## Deployment
 This app was deployed using Digital Ocean Kubernetes. <br>
 live at: http://www.ticketing-app-practice.xyz
 
