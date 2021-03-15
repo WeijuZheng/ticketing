@@ -76,7 +76,7 @@ All the common code shared among each service are written in a NPM module.<br>
 
 ## Deployment
 This app was deployed using Digital Ocean Kubernetes. <br>
-live at: http://www.ticketing-app-practice.xyz
+live demo at: http://www.ticketing-app-practice.xyz
 
 ## CI/CD
 All the CI/CD workflow for this app are created using github action.
