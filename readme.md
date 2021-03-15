@@ -5,7 +5,7 @@ This application allow users to purchase or sell tickets.
 
 This app is created mainly using microservices architecture, docker, kubernetes, NATS Streamging Server, Nginx Ingress Controller, Node.js, Express, MongoDB, Next.js and Typescript.
 
-## Installation (Local Dev)
+## Setup (Local Dev)
 make sure you have docker and kubernetes installed in your local enviorment, then clone this repository.
 
 ### Set Up NGINX Ingress Controller
