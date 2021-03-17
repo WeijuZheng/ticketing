@@ -5,7 +5,7 @@ This application allow users to purchase or sell tickets.
 
 This app is created mainly using microservices architecture, docker, kubernetes, NATS Streamging Server, Nginx Ingress Controller, Node.js, Express, MongoDB, Next.js and Typescript.
 
-## Installation (Local Dev)
+## Setup (Local Dev)
 make sure you have docker and kubernetes installed in your local enviorment, then clone this repository.
 
 ### Set Up NGINX Ingress Controller
@@ -76,7 +76,7 @@ All the common code shared among each service are written in a NPM module.<br>
 
 ## Deployment
 This app was deployed using Digital Ocean Kubernetes. <br>
-live at: http://www.ticketing-app-practice.xyz
+live demo at: http://www.ticketing-app-practice.xyz
 
 ## CI/CD
 All the CI/CD workflow for this app are created using github action.
